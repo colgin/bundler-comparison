@@ -1,6 +1,8 @@
-interface Options {
-    data: string;
-}
-declare function init(options: Options): void;
+declare function sum(a: number, b: number): number;
+declare function multiple(a: number, b: number): number;
 
-export { Options, init };
+declare function consoleImportUrl(): void;
+
+declare function logInProduction(): void;
+
+export { consoleImportUrl, logInProduction, multiple, sum };

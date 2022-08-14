@@ -20,20 +20,40 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
-  init: () => init
+  consoleImportUrl: () => consoleImportUrl,
+  logInProduction: () => logInProduction,
+  multiple: () => multiple,
+  sum: () => sum
 });
 module.exports = __toCommonJS(src_exports);
 
-// ../../node_modules/.pnpm/tsup@5.12.9/node_modules/tsup/assets/cjs_shims.js
+// ../../node_modules/.pnpm/tsup@6.2.2/node_modules/tsup/assets/cjs_shims.js
 var getImportMetaUrl = () => typeof document === "undefined" ? new URL("file:" + __filename).href : document.currentScript && document.currentScript.src || new URL("main.js", document.baseURI).href;
 var importMetaUrl = /* @__PURE__ */ getImportMetaUrl();
 
-// src/index.ts
-function init(options) {
-  console.log(options);
+// src/math.ts
+function sum(a, b) {
+  return a + b;
+}
+function multiple(a, b) {
+  return a * b;
+}
+
+// src/import-url.ts
+function consoleImportUrl() {
   console.log(importMetaUrl);
+}
+
+// src/env.ts
+function logInProduction() {
+  if (true) {
+    console.log("log somthing");
+  }
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  init
+  consoleImportUrl,
+  logInProduction,
+  multiple,
+  sum
 });
