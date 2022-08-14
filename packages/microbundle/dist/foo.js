@@ -1,0 +1,2 @@
+exports.consoleImportUrl=function(){console.log("undefined"==typeof document?new(require("url").URL)("file:"+__filename).href:document.currentScript&&document.currentScript.src||new URL("foo.js",document.baseURI).href)},exports.logInProduction=function(){"development"!==process.env.NODE_ENV&&console.log("log somthing")},exports.multiple=function(e,o){return e*o},exports.sum=function(e,o){return e+o};
+//# sourceMappingURL=foo.js.map

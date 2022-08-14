@@ -1,0 +1,24 @@
+{
+  "name": "microbundle",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.ts",
+  "main": "dist/foo.js",
+  "module": "dist/foo.module.js",
+  "unpkg": "dist/foo.umd.js",
+  "exports": {
+    "require": "./dist/foo.cjs",
+    "default": "./dist/foo.modern.js"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "colgin",
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^4.7.4"
+  },
+  "license": "ISC"
+}

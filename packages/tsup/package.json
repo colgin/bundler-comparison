@@ -1,0 +1,16 @@
+{
+  "name": "tsup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup -shims src/index.ts --format esm,cjs --dts --env.NODE_ENV production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^6.2.2"
+  }
+}
